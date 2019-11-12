@@ -9,11 +9,15 @@ class App extends React.Component {
         super(props);
         
         /** This is the only time when we do direct assignment to this.state */
-        this.state = { lat: null };
+        this.state = { lat: null, errorMessage: '' };
         
         window.navigator.geolocation.getCurrentPosition(
-            /** success function callback */ 
+            
+            /** Success function callback.A call back function is called at some point in the future. 
+             *  This function is not going to be executed when the constructor executes but when the 
+             *  constructor returns */ 
             position => {
+                
                 /** we called setState */
                 this.setState({ lat: position.coords.latitude });
                 
@@ -21,14 +25,22 @@ class App extends React.Component {
                  * this.state.lat = position.coords.latitude
                 */
             },
-            /** failure function callback */
-            err => console.log(err)
+            
+            /** Failure function callback */
+            err => {
+                this.setState({ errorMessage: err.message });
+            }
         );
     }
 
     render() {
-        
-    return <div>Latitude: {this.state.lat}</div>
+        return (
+            <div>
+                Latitude: {this.state.lat}
+                <br/>
+                Error: {this.state.errorMessage}
+            </div>
+        ); 
     }
 }
 
