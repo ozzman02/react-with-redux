@@ -1,36 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SeasonDisplay from './SeasonDisplay';
 
 
 class App extends React.Component {
 
-    constructor(props) {
-        
-        super(props);
-        
-        /** This is the only time when we do direct assignment to this.state */
-        this.state = { lat: null, errorMessage: '' };
-        
+    /** State initialization - no constructor */
+    state = { lat: null, errorMessage: '' };
+
+     /** Success function callback.A call back function is called at some point in the future. */ 
+    componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(
-            
-            /** Success function callback.A call back function is called at some point in the future. 
-             *  This function is not going to be executed when the constructor executes but when the 
-             *  constructor returns */ 
-            position => {
-                
-                /** we called setState */
-                this.setState({ lat: position.coords.latitude });
-                
-                /** do not do 
-                 * this.state.lat = position.coords.latitude
-                */
-            },
-            
-            /** Failure function callback */
-            err => {
-                this.setState({ errorMessage: err.message });
-            }
+            position => this.setState({ lat: position.coords.latitude }),   
+            err => this.setState({ errorMessage: err.message })
         );
+    }
+
+    componentDidUpdate() {
+        console.log('My component was just updated');
     }
 
     render() {
@@ -38,7 +25,7 @@ class App extends React.Component {
             return <div>Error: {this.state.errorMessage}</div>
         }
         if (!this.state.errorMessage && this.state.lat) {
-            return <div>Lat: {this.state.lat}</div>
+            return <SeasonDisplay lat={this.state.lat} />
         }
         return <div>Loading...</div>
     }
