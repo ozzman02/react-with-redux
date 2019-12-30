@@ -4,6 +4,34 @@
       "title": "My Stream",
       "description": "This is a great stream !",
       "id": 1
+    },
+    {
+      "title": "My second stream",
+      "description": "test2",
+      "id": 2
+    },
+    {
+      "title": "Third stream",
+      "description": "test3",
+      "id": 3
+    },
+    {
+      "title": "This is a new stream created by me",
+      "description": "test 4",
+      "userId": "105102457817635362792",
+      "id": 4
+    },
+    {
+      "title": "another stream created",
+      "description": "test 5",
+      "userId": "105102457817635362792",
+      "id": 5
+    },
+    {
+      "title": "testing  navigation",
+      "description": "test 6",
+      "userId": "105102457817635362792",
+      "id": 6
     }
   ]
 }
