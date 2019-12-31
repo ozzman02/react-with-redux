@@ -7,19 +7,19 @@ class StreamList extends React.Component {
 
     componentDidMount() {
         this.props.fetchStreams();
-    }
+    };
 
     /* Render Delete and Edit buttons*/
     renderAdmin(stream) {
         if (stream.userId === this.props.currentUserId) {
            return (
                <div className="right floated content">
-                   <button className="ui button primary">Edit</button>
+                   <Link to={`/streams/edit/${stream.id}`} className="ui button primary">Edit</Link>
                    <button className="ui button negative">Delete</button>
                </div>
            );
         }
-    }
+    };
 
     /* Renders create stream button if user is signed in */
     renderCreate() {
@@ -30,7 +30,7 @@ class StreamList extends React.Component {
                 </div>
             );
         }
-    }
+    };
 
     /* Renders stream list */
     renderList() {
@@ -46,7 +46,7 @@ class StreamList extends React.Component {
                 </div>
             );
         });
-    }
+    };
 
     render() {
         return (
@@ -56,9 +56,9 @@ class StreamList extends React.Component {
                 {this.renderCreate()}
             </div>
         );
-    }
+    };
 
-};
+}
 
 const mapStateToProps = (state) => {
     /*
