@@ -1,0 +1,27 @@
+GET http://localhost:3001/books HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://localhost:3001/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Do Androids Dream of Electric Sheep?"
+}
+
+###
+
+PUT http://localhost:3001/books/5f71 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Lord of the Rings - The Two Towers"
+}
+
+###
+
+DELETE http://localhost:3001/books/5f71 HTTP/1.1
+Content-Type: application/json
+
+
