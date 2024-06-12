@@ -1,5 +1,5 @@
 import axios from "axios";
-const { createContext, useState } = require("react");
+const { createContext, useState, useCallback } = require("react");
 
 const BooksContext = createContext();
 
@@ -9,10 +9,10 @@ function BooksProvider({ children }) {
 
   const [books, setBooks] = useState([]);
 
-  const fetchBooks = async () => {
+  const fetchBooks =  useCallback(async () => {
     const response = await axios.get(BOOKS_API_URL);
     setBooks(response.data);
-  };
+  }, []) ;
 
   const createBookHandler = async (title) => {
     const response = await axios.post(BOOKS_API_URL, {

@@ -11,9 +11,7 @@ export default function App() {
     // With Custom Hook
     const { fetchBooks } = useBooksContext();
 
-  	useEffect(() => {
-    	fetchBooks();
-  	}, []);
+  	useEffect(() => { fetchBooks(); }, [fetchBooks]);
 
   	return (
     	<div className="app">
