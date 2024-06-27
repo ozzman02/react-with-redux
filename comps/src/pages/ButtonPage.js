@@ -5,28 +5,32 @@ import { BsCloudDownload } from "react-icons/bs";
 
 export default function ButtonPage() {
 
+    const handleClick = () => {
+        
+    };
+
     return (
         <div>
             <div>
-                <Button className="mb-5" outline>
+                <Button secondary outline rounded className="mb-5" onClick={handleClick}>
                     <GoBell />Click me!!
                 </Button>
             </div>
             <div>
-                <Button danger>
+                <Button danger outline onMouseEnter={handleClick}>
                     <BsCloudDownload />Buy Now!
                 </Button>
             </div>
             <div>
-                <Button warning>
+                <Button warning onMouseLeave={handleClick}>
                     <GoDatabase />See Deal!
                 </Button>
             </div>
             <div>
-                <Button secondary>Hide Ads!</Button>
+                <Button secondary outline>Hide Ads!</Button>
             </div>
             <div>
-                <Button primary>Something!</Button>
+                <Button primary rounded>Something!</Button>
             </div>
         </div>
     );
