@@ -59,6 +59,7 @@ export default function App() {
     });
     const updatedBooks = books.map((book) => {
       if (book.id === id) {
+        // here we are creating a new object
         return { ...book, ...response.data };
       }
       return book;
