@@ -43,6 +43,18 @@ function BooksProvider({ children }) {
     setBooks(updatedBooks);
   };
 
+  /*
+    If the key is identical to value we can use just the key to define the object:
+    
+    const valueToShare = {
+      books,
+      fetchBooks,
+      createBookHandler,
+      editBookByIdHandler,
+      deleteBookByIdHandler
+    };
+
+  */
   const valueToShare = {
     books: books,
     fetchBooks: fetchBooks,
