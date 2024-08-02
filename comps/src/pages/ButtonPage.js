@@ -6,7 +6,7 @@ import { BsCloudDownload } from "react-icons/bs";
 export default function ButtonPage() {
 
     const handleClick = () => {
-        
+        //console.log('Clicked !');
     };
 
     return (
