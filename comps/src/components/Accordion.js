@@ -17,14 +17,14 @@ export default function Accordion({ items }) {
     */
 
     // functional approach to resolve this:
-    const handleClick = (index) => {
+    const handleClick = (nextIndex) => {
         //console.log('Stale version of expandedIndex is ', expandedIndex);
-        setExpandedIndex(mostUpdatedExpandedIndexValue => {
+        setExpandedIndex((mostUpdatedExpandedIndexValue) => {
             //console.log('Up to date version of expandedIndex is ', mostUpdatedExpandedIndexValue);
-            if (mostUpdatedExpandedIndexValue === index) {
+            if (mostUpdatedExpandedIndexValue === nextIndex) {
                 return -1;
             } else {
-                return index;
+                return nextIndex;
             }
         });
     };
