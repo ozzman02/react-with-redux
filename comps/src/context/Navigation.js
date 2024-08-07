@@ -4,6 +4,7 @@ const NavigationContext = createContext();
 
 function NavigationProvider({ children }) {
 
+    /* The only reason we have the state is to cause a re render whenever a user clicks the forward and back buttons */
     const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
     useEffect(() => {
@@ -21,7 +22,7 @@ function NavigationProvider({ children }) {
             window.removeEventListener('popstate', handler);
         };
 
-    },[]);
+    }, []);
 
     const navigate = (to) => {
         window.history.pushState({}, '', to);

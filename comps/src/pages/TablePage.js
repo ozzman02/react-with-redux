@@ -26,6 +26,7 @@ export default function TablePage() {
         } 
     ];
 
+    /* Function that returns the key */
     const keyFn = (fruit) => {
         return fruit.name;
     };

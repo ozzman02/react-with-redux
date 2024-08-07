@@ -5,14 +5,16 @@ function Link({ to, children, className, activeClassName }) {
 
     const { navigate, currentPath } = useNavigation();
 
+    /* Apply the activeClassName only if currentPath === to */
     const classes = classNames('text-blue-500', className, currentPath === to && activeClassName);
 
     const handleClick = (event) => {
         if (event.metaKey || event.ctrlKey) {
             return;
         }
+        /* Stops the standard navigation */
+        event.preventDefault(); 
         /* Programatically navigating to another page */
-        event.preventDefault();
         navigate(to);
     };
 

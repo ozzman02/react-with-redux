@@ -1,6 +1,6 @@
 import useNavigation from '../hooks/UseNavigation';
 
-function Route({ path, children}) {
+function Route({ path, children }) {
 
     const { currentPath } = useNavigation();
 
