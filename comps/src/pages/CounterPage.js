@@ -1,14 +1,33 @@
 import { useReducer } from 'react';
+import { produce } from 'immer';
 import Button from '../components/Button';
 import Panel from '../components/Panel';
 
-const reducer = (state, action) => {
-    return {
-        ...state,
-        count: state.count + 1
-    };
-};
 
+const INCREMENT_COUNT = 'increment';
+const DECREMENT_COUNT = 'decrement';
+const SET_VALUE_TO_ADD = 'change_value_to_add';
+const ADD_VALUE_TO_COUNT = 'add_value_to_count';
+
+const reducer = (state, action) => {
+    switch (action.type) {
+        case INCREMENT_COUNT:
+            state.count = state.count + 1;
+            return;
+        case SET_VALUE_TO_ADD:
+            state.valueToAdd = action.payload;
+            return;
+        case DECREMENT_COUNT:
+            state.count = state.count - 1
+            return;
+        case ADD_VALUE_TO_COUNT:
+            state.count = state.count + state.valueToAdd;
+            state.valueToAdd = 0;
+            return;
+        default: 
+            return state;    
+    }
+};
 
 export default function CounterPage({ initialCount }) {
 
@@ -16,7 +35,7 @@ export default function CounterPage({ initialCount }) {
 
     //const [valueToAdd, setValueToAdd] = useState(0);
 
-    const [state, dispatch] = useReducer(reducer, {
+    const [state, dispatch] = useReducer(produce(reducer), {
         count: initialCount,
         valueToAdd: 0
     });
@@ -24,11 +43,15 @@ export default function CounterPage({ initialCount }) {
     console.log(state);
 
     const increment = () => {
-        dispatch();
+        dispatch({
+            type: INCREMENT_COUNT
+        });
     }    
 
     const decrement = () => {
-        //setCount(count - 1);
+        dispatch({
+            type: DECREMENT_COUNT
+        });
     }
 
     const handleChange = (event) => {
@@ -40,13 +63,18 @@ export default function CounterPage({ initialCount }) {
             an empty string to parseInt.
         */
         const value = parseInt(event.target.value) || 0;
-        //setValueToAdd(value);
+
+        dispatch({
+            type: SET_VALUE_TO_ADD,
+            payload: value
+        });
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        //setCount(count + valueToAdd);
-        //setValueToAdd(0);
+        dispatch({
+            type: ADD_VALUE_TO_COUNT
+        });
     }
     
     return (
