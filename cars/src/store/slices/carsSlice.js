@@ -29,6 +29,8 @@ const carsSlice = createSlice({
     }
 });
 
+// Action objects
 export const { changeSearchTerm, addCar, removeCar } = carsSlice.actions;
 
+// Combined reducer
 export const carsReducer = carsSlice.reducer;
