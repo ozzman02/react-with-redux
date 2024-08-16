@@ -1,5 +1,9 @@
-function App() {
-    return 'App!!!'
-}
+import UserList from "./components/UserList";
 
-export default App;
+export default function App() {
+    return (
+        <div className="container mx-auto">
+            <UserList />
+        </div>
+    );
+}
