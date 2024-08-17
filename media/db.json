@@ -1,5 +1,50 @@
 {
-    "users": [{ "id": 1, "name": "Myra" }],
-    "albums": [],
-    "photos": []
+  "users": [
+    {
+      "id": "1",
+      "name": "Myra"
+    },
+    {
+      "id": "c34c",
+      "name": "Sheila Grady DVM"
+    },
+    {
+      "id": "a488",
+      "name": "Silvia Bahringer"
+    },
+    {
+      "id": "4582",
+      "name": "Ignacio Kozey"
+    },
+    {
+      "id": "2e3c",
+      "name": "Barry Robel"
+    },
+    {
+      "id": "df28",
+      "name": "Leo Considine"
+    },
+    {
+      "id": "ff96",
+      "name": "Malcolm Hackett"
+    },
+    {
+      "id": "60aa",
+      "name": "Mr. Lyle Nicolas"
+    },
+    {
+      "id": "9b57",
+      "name": "Miss Sherman Stanton"
+    },
+    {
+      "id": "342d",
+      "name": "Ms. Gilbert Nikolaus III"
+    },
+    {
+      "id": "6d01",
+      "name": "Caroline Lind"
+    }
+  ],
+  "albums": [],
+  "photos": []
 }
