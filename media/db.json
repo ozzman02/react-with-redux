@@ -7,26 +7,6 @@
     {
       "id": "a488",
       "name": "Silvia Bahringer"
-    },
-    {
-      "id": "4582",
-      "name": "Ignacio Kozey"
-    },
-    {
-      "id": "53e0",
-      "name": "Elisa Pfannerstill"
-    },
-    {
-      "id": "16c7",
-      "name": "Tyler Marvin"
-    },
-    {
-      "id": "073b",
-      "name": "Dwight Reynolds"
-    },
-    {
-      "id": "06a3",
-      "name": "Elisa Gibson"
     }
   ],
   "albums": [
@@ -34,6 +14,91 @@
       "id": 10,
       "title": "Hiking Trip",
       "userId": 1
+    },
+    {
+      "id": "6eee",
+      "userId": "1",
+      "title": "Licensed Concrete Towels"
+    },
+    {
+      "id": "4b99",
+      "userId": "1",
+      "title": "Refined Concrete Bacon"
+    },
+    {
+      "id": "61e9",
+      "userId": "1",
+      "title": "Unbranded Frozen Car"
+    },
+    {
+      "id": "2c8f",
+      "userId": "1",
+      "title": "Recycled Frozen Keyboard"
+    },
+    {
+      "id": "4df5",
+      "userId": "1",
+      "title": "Tasty Steel Fish"
+    },
+    {
+      "id": "f56e",
+      "userId": "a488",
+      "title": "Recycled Concrete Fish"
+    },
+    {
+      "id": "c4fb",
+      "userId": "a488",
+      "title": "Intelligent Cotton Hat"
+    },
+    {
+      "id": "eeba",
+      "userId": "1",
+      "title": "Small Concrete Hat"
+    },
+    {
+      "id": "e504",
+      "userId": null,
+      "title": "Unbranded Granite Car"
+    },
+    {
+      "id": "8733",
+      "userId": null,
+      "title": "Small Wooden Towels"
+    },
+    {
+      "id": "d807",
+      "userId": null,
+      "title": "Handcrafted Rubber Computer"
+    },
+    {
+      "id": "a1b0",
+      "userId": "a488",
+      "title": "Luxurious Metal Bacon"
+    },
+    {
+      "id": "c850",
+      "userId": "a488",
+      "title": "Small Rubber Shoes"
+    },
+    {
+      "id": "0124",
+      "userId": "a488",
+      "title": "Intelligent Concrete Gloves"
+    },
+    {
+      "id": "a3ab",
+      "userId": null,
+      "title": "Fantastic Soft Shoes"
+    },
+    {
+      "id": "f160",
+      "userId": "1",
+      "title": "Rustic Cotton Sausages"
+    },
+    {
+      "id": "c890",
+      "userId": "a488",
+      "title": "Elegant Fresh Shirt"
     }
   ],
   "photos": []
