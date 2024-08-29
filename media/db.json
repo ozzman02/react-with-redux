@@ -11,34 +11,9 @@
   ],
   "albums": [
     {
-      "id": 10,
-      "title": "Hiking Trip",
-      "userId": 1
-    },
-    {
       "id": "6eee",
       "userId": "1",
       "title": "Licensed Concrete Towels"
-    },
-    {
-      "id": "4b99",
-      "userId": "1",
-      "title": "Refined Concrete Bacon"
-    },
-    {
-      "id": "61e9",
-      "userId": "1",
-      "title": "Unbranded Frozen Car"
-    },
-    {
-      "id": "2c8f",
-      "userId": "1",
-      "title": "Recycled Frozen Keyboard"
-    },
-    {
-      "id": "4df5",
-      "userId": "1",
-      "title": "Tasty Steel Fish"
     },
     {
       "id": "f56e",
@@ -46,60 +21,146 @@
       "title": "Recycled Concrete Fish"
     },
     {
-      "id": "c4fb",
-      "userId": "a488",
-      "title": "Intelligent Cotton Hat"
-    },
-    {
-      "id": "eeba",
+      "id": "6edc",
       "userId": "1",
-      "title": "Small Concrete Hat"
-    },
-    {
-      "id": "e504",
-      "userId": null,
-      "title": "Unbranded Granite Car"
-    },
-    {
-      "id": "8733",
-      "userId": null,
-      "title": "Small Wooden Towels"
-    },
-    {
-      "id": "d807",
-      "userId": null,
-      "title": "Handcrafted Rubber Computer"
-    },
-    {
-      "id": "a1b0",
-      "userId": "a488",
-      "title": "Luxurious Metal Bacon"
-    },
-    {
-      "id": "c850",
-      "userId": "a488",
-      "title": "Small Rubber Shoes"
-    },
-    {
-      "id": "0124",
-      "userId": "a488",
-      "title": "Intelligent Concrete Gloves"
-    },
-    {
-      "id": "a3ab",
-      "userId": null,
-      "title": "Fantastic Soft Shoes"
-    },
-    {
-      "id": "f160",
-      "userId": "1",
-      "title": "Rustic Cotton Sausages"
-    },
-    {
-      "id": "c890",
-      "userId": "a488",
-      "title": "Elegant Fresh Shirt"
+      "title": "Licensed Fresh Hat"
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "id": "fd96",
+      "albumId": "6eee",
+      "url": "https://loremflickr.com/150/150/abstract?lock=1153"
+    },
+    {
+      "id": "e66e",
+      "albumId": "6eee",
+      "url": "https://loremflickr.com/150/150/abstract?lock=40577"
+    },
+    {
+      "id": "68a1",
+      "albumId": "6edc",
+      "url": "https://loremflickr.com/150/150/abstract?lock=10973"
+    },
+    {
+      "id": "b52f",
+      "albumId": "6edc",
+      "url": "https://loremflickr.com/150/150/abstract?lock=5299"
+    },
+    {
+      "id": "d11c",
+      "albumId": "6edc",
+      "url": "https://loremflickr.com/150/150/abstract?lock=76516"
+    },
+    {
+      "id": "b74e",
+      "albumId": "6edc",
+      "url": "https://loremflickr.com/150/150/abstract?lock=45123"
+    },
+    {
+      "id": "619c",
+      "albumId": "6edc",
+      "url": "https://loremflickr.com/150/150/abstract?lock=61437"
+    },
+    {
+      "id": "f4d4",
+      "albumId": "6edc",
+      "url": "https://loremflickr.com/150/150/abstract?lock=37190"
+    },
+    {
+      "id": "5b8e",
+      "albumId": "6edc",
+      "url": "https://loremflickr.com/150/150/abstract?lock=74112"
+    },
+    {
+      "id": "9088",
+      "albumId": "6edc",
+      "url": "https://loremflickr.com/150/150/abstract?lock=71000"
+    },
+    {
+      "id": "f643",
+      "albumId": "6edc",
+      "url": "https://loremflickr.com/150/150/abstract?lock=47008"
+    },
+    {
+      "id": "c258",
+      "albumId": "f56e",
+      "url": "https://loremflickr.com/150/150/abstract?lock=39995"
+    },
+    {
+      "id": "8dcc",
+      "albumId": "f56e",
+      "url": "https://loremflickr.com/150/150/abstract?lock=84971"
+    },
+    {
+      "id": "298a",
+      "albumId": "f56e",
+      "url": "https://loremflickr.com/150/150/abstract?lock=8280"
+    },
+    {
+      "id": "2376",
+      "albumId": "f56e",
+      "url": "https://loremflickr.com/150/150/abstract?lock=25333"
+    },
+    {
+      "id": "197f",
+      "albumId": "f56e",
+      "url": "https://loremflickr.com/150/150/abstract?lock=91524"
+    },
+    {
+      "id": "93e4",
+      "albumId": "f56e",
+      "url": "https://loremflickr.com/150/150/abstract?lock=12464"
+    },
+    {
+      "id": "937d",
+      "albumId": "f56e",
+      "url": "https://loremflickr.com/150/150/abstract?lock=24073"
+    },
+    {
+      "id": "cbd9",
+      "albumId": "f56e",
+      "url": "https://loremflickr.com/150/150/abstract?lock=90133"
+    },
+    {
+      "id": "64ae",
+      "albumId": "f56e",
+      "url": "https://loremflickr.com/150/150/abstract?lock=54123"
+    },
+    {
+      "id": "e175",
+      "albumId": "f56e",
+      "url": "https://loremflickr.com/150/150/abstract?lock=99771"
+    },
+    {
+      "id": "1dba",
+      "albumId": "6eee",
+      "url": "https://loremflickr.com/150/150/abstract?lock=54113"
+    },
+    {
+      "id": "debe",
+      "albumId": "6eee",
+      "url": "https://loremflickr.com/150/150/abstract?lock=58203"
+    },
+    {
+      "id": "d6fc",
+      "albumId": "6eee",
+      "url": "https://loremflickr.com/150/150/abstract?lock=94014"
+    },
+    {
+      "id": "3409",
+      "albumId": "6eee",
+      "url": "https://loremflickr.com/150/150/abstract?lock=89368"
+    },
+    {
+      "id": "0588",
+      "albumId": "6eee",
+      "url": "https://loremflickr.com/150/150/abstract?lock=54827"
+    },
+    {
+      "id": "8bdb",
+      "albumId": "6eee",
+      "url": "https://loremflickr.com/150/150/abstract?lock=24623"
+    }
+  ]
 }

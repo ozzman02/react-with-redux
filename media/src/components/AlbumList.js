@@ -1,11 +1,11 @@
 import { useFetchAlbumsQuery, useAddAlbumMutation } from "../store";
 import Skeleton from "./Skeleton";
-import ExpandablePanel from "./ExpandablePanel";
 import Button from "./Button";
+import AlbumListItem from "./AlbumListItem";
 
 function AlbumList({ user }) {
 
-    const { data, error, isLoading } = useFetchAlbumsQuery(user);
+    const { data, error, isFetching } = useFetchAlbumsQuery(user);
 
     const [addAlbum, results] = useAddAlbumMutation();
 
@@ -15,18 +15,18 @@ function AlbumList({ user }) {
     
     let content;
 
-    if (isLoading) {
+    /* 
+        The difference between isLoading and isFetching is that isLoading is set to true
+        only the first time you make the request, is fetching is set to true every time 
+        that the request is made.
+    */
+    if (isFetching) {
         content = <Skeleton className="h-10 w-full" times={3} />
     } else if (error) {
         content = <div>Error loading albums</div>
     } else {
         content = data.map(album => {
-            const header = <div>{album.title}</div>
-            return (
-                <ExpandablePanel key={album.id} header={header}>
-                    List of photos in the album
-                </ExpandablePanel>
-            );
+            return <AlbumListItem key={album.id} album={album} />
         });
     }
     
