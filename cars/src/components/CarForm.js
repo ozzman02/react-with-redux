@@ -6,12 +6,17 @@ function CarForm() {
     const dispatch = useDispatch();
     
     // state is the big state object
-    const { name, cost } = useSelector((state) => {
+    /*(const { name, cost } = useSelector((state) => {
         return {
             name: state.form.name,
             cost: state.form.cost
         }
-    });
+    });*/
+
+    const name = useSelector((state) => state.form.name);
+
+    const cost = useSelector((state) => state.form.cost);
+
 
     const handleNameChange = (event) => {
         // event.target.value is the payload

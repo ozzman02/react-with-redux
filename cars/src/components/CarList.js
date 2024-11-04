@@ -1,9 +1,22 @@
 import { useSelector, useDispatch } from "react-redux";
+import { createSelector } from "@reduxjs/toolkit";
 import { removeCar } from "../store";
+
+const memoizedCars = createSelector(
+  [(state) => state.cars.data, (state) => state.cars.searchTerm],
+  (data, searchTerm) =>
+    data.filter((car) =>
+      car.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+);
 
 function CarList() {
 
     const dispatch = useDispatch();
+
+    const cars = useSelector(memoizedCars);
+
+    const name = useSelector((state) => state.form.name);
 
     /*
         Original function before using derived state
@@ -49,7 +62,7 @@ function CarList() {
                 });
 
     */
-    const { cars, name } = useSelector(({ form, cars: { data, searchTerm }}) => {
+    /*const { name } = useSelector(({ form, cars: { data, searchTerm }}) => {
         const filteredCars = data.filter((car) => 
             car.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
@@ -57,7 +70,7 @@ function CarList() {
             cars: filteredCars,
             name: form.name
         }
-    });
+    });*/
 
     const handleCarDelete = (car) => {
         dispatch(removeCar(car.id));
